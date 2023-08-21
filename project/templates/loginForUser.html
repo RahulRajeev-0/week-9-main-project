@@ -1,0 +1,12 @@
+{% extends 'loginBase.html' %}   <!-- inheriting from base page ( loginBase)-->
+
+{% block title %}Login{% endblock title %}        <!-- tab title-->
+
+{% block formAction %}/index/{% endblock formAction %}      <!--url routing for the login form action -->
+
+{% block heading %}Login for Users{% endblock heading %}    <!-- heading of the form (user or admin) -->
+
+
+{% block colorOfHeading %}info{% endblock colorOfHeading %}
+{% block buttonColor %}info{% endblock buttonColor %}
+{% block content %}<br><p>don't have an account <a href="signUp/">Sign Up</a></p> {% endblock content %}   <!-- for registing account if user dosen't have one-->
