@@ -14,4 +14,5 @@ urlpatterns = [
     path('logout_admin/',views.logout_admin,name='logout_admin'),
     path('ad_edit/<int:id>',views.ad_edit,name='ad_edit'),
     path('ad_delete/<int:id>',views.ad_delete_user,name='ad_delete'),
+    path('admin_search/',views.admin_search,name='admin_search'),
 ]

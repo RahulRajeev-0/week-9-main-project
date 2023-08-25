@@ -221,3 +221,15 @@ def logout_admin(request):
         return redirect('/adminLog')
 
 
+def admin_search(request):
+    if request.method=='POST':
+        username=request.POST.get('search_admin','')
+        print(username)
+
+        if username :
+            u=User.objects.filter(username__icontains=username)
+            #users=User.objects.all()
+            context={'users':u}
+            return render(request,'Admin_CRUD_page.html',context)
+          
+    return redirect ('admin_index')

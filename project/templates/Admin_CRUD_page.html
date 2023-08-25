@@ -16,6 +16,42 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Admin Panel</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">😎<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout_admin/">Log Out</a>
+          </li> 
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Option
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/ad_create_user/">Create New User</a>
+              {% comment %} <a class="dropdown-item" href="/logout_admin/">Log Out</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a> {% endcomment %}
+            </div>
+          </li>
+          {% comment %} <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> {% endcomment %}
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="/admin_search/" method='post'  > {% csrf_token %}
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search_admin">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+<!--
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Admin Panel</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -24,11 +60,12 @@
           <a class="nav-item nav-link active" href="#">😎<span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="/ad_create_user/">Create New User</a>  
           <a class="nav-item nav-link" href="/logout_admin/">Log Out</a>
-          <!--<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>  -->
+          <input class="form-control " type="search"  name="search_admin">
+        <button class="btn btn-outline-success" type="submit">Search</button>
         </div>
       </div>
     </nav>
-
+  -->
 
     <!--code for showing the message (login success)-->
     {% for message in messages  %}
